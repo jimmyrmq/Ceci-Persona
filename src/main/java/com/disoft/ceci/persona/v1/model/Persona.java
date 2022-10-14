@@ -1,15 +1,27 @@
 package com.disoft.ceci.persona.v1.model;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import java.time.LocalDate;
 
 public class Persona {
     private Integer ID;
+    @ApiModelProperty(notes = "Tipo Documento - 1: RIF 2: Cedula de Identidad", example = "2", required = true)
     private Integer idTipoDocumento;
+
+    @ApiModelProperty(notes = "Numero de Documento", example = "17310860", required = true)
     private Integer numeroDocumento;
     private Integer numeroFiscal;
+
+    @ApiModelProperty(notes = "Nombre de la Persona", example = "Jimmy", required = true)
     private String nombre;
+
+    @ApiModelProperty(notes = "Apellido de la Persona", example = "Apellido", required = true)
     private String apellido;
+
+    @ApiModelProperty(notes = "Sexo de la Persona", example = "M", required = true)
     private String sexo;
+    @ApiModelProperty(notes = "Fecha de nacimineto", example = "1986-07-27", required = true)
     private LocalDate fechaNacimiento;
     private String direccion1;
     private String direccion2;

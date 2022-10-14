@@ -5,27 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c1f22cb-fc1b-4dd2-9008-348bce9f4b66" name="Changes" comment="Ceci-Persona">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/common/Sexo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/common/resultdata/ResultOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/common/resultdata/Severidad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/controller/PersonaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/controller/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/model/Persona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/service/AdministracionPersona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/service/ConsultaPersona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/util/IPersonaAdministracion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/util/IPersonaConsulta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/util/db/ConexionDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/util/excepcion/UnprocessableEntityPersona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/util/validator/IValidatorPersona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/util/validator/PersonaValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/conexion.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/PersonaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/PersonaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/disoft/ceci/persona/PersonaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/disoft/ceci/persona/PersonaApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/controller/PersonaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/controller/PersonaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/model/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/model/Persona.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665763995783</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ceci-Persona">
+      <created>1665785555686</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665785555686</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
