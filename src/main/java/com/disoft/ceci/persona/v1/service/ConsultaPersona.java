@@ -1,6 +1,7 @@
 package com.disoft.ceci.persona.v1.service;
 
 import com.disoft.ceci.persona.v1.model.Persona;
+import com.disoft.ceci.persona.v1.util.BuscarDatosPersonaArchivo;
 import com.disoft.ceci.persona.v1.util.IPersonaConsulta;
 import com.disoft.ceci.persona.v1.util.db.ConexionDB;
 import org.slf4j.Logger;
@@ -32,7 +33,7 @@ public class ConsultaPersona implements IPersonaConsulta {
         Connection conn  = cbd.initConection();
         if(conn!=null) {
             try {
-                PreparedStatement pstmt = conn.prepareStatement("select ID, IDTipoDocumento, NumeroDocumento, NumeroFiscal, Nombre, Apellido, Sexo, FechaNacimiento, Direccion1, Direccion2, Telefono1, Telefono2, EdoCivil, Correo, URL, URIFoto from persona where NumeroDocumento=?;", 1003, 1007);
+                PreparedStatement pstmt = conn.prepareStatement("select ID, IDTipoDocumento, NumeroDocumento, NumeroFiscal, Nombre1, Nombre2, Apellido1, Apellido2, Sexo, FechaNacimiento, Direccion1, Direccion2, Telefono1, Telefono2, EdoCivil, Correo, URL, URIFoto from persona where NumeroDocumento=?;", 1003, 1007);
                 try {
                     pstmt.setInt(1, nroDoc);
                     ResultSet rs = pstmt.executeQuery();
@@ -43,24 +44,29 @@ public class ConsultaPersona implements IPersonaConsulta {
                         persona.setIdTipoDocumento(rs.getInt(2));
                         persona.setNumeroDocumento(rs.getInt(3));
                         persona.setNumeroFiscal(rs.getInt(4));
-                        persona.setNombre(rs.getString(5));
-                        persona.setApellido(rs.getString(6));
-                        persona.setSexo(rs.getString(7));
+                        persona.setPrimerNombre(rs.getString(5));
+                        persona.setSegundoNombre(rs.getString(6));
+                        persona.setPrimerApellido(rs.getString(7));
+                        persona.setSegundoApellido(rs.getString(8));
+                        persona.setSexo(rs.getString(9));
 
-                        Date input = rs.getDate(8);
+                        Date input = rs.getDate(10);
                         if (input != null) {
                             //LocalDate date = input.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
                             persona.setFechaNacimiento(input.toLocalDate());
                         }
 
-                        persona.setDireccion1(rs.getString(9));
-                        persona.setDireccion2(rs.getString(10));
-                        persona.setTelefono1(rs.getString(11));
-                        persona.setTelefono2(rs.getString(12));
-                        persona.setEdoCivil(rs.getString(13));
-                        persona.setCorreo(rs.getString(14));
-                        persona.setUrl(rs.getString(15));
-                        persona.setUriFoto(rs.getString(16));
+                        persona.setDireccion1(rs.getString(11));
+                        persona.setDireccion2(rs.getString(12));
+                        persona.setTelefono1(rs.getString(13));
+                        persona.setTelefono2(rs.getString(14));
+                        persona.setEdoCivil(rs.getString(15));
+                        persona.setCorreo(rs.getString(16));
+                        persona.setUrl(rs.getString(17));
+                        persona.setUriFoto(rs.getString(18));
+                    }else {
+                        BuscarDatosPersonaArchivo bdpa = new BuscarDatosPersonaArchivo();
+                        persona = bdpa.getPersona(nroDoc);
                     }
 
                     conn.close();

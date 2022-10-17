@@ -30,10 +30,14 @@ public class PersonaController {
     private IValidatorPersona validatorPersona;
 
     @GetMapping("{id}")
-    public ResponseEntity<Persona> obtenerPersona(@PathVariable Integer id) {
-        Persona peronsa = personaConsulta.obtener(id);
+    public ResponseEntity obtenerPersona(@PathVariable Integer id) {
+        Persona persona = personaConsulta.obtener(id);
+        ResponseEntity responseEntity;
 
-        ResponseEntity responseEntity = new ResponseEntity(peronsa, HttpStatus.OK);
+        if(persona!=null)
+            responseEntity = new ResponseEntity(persona, HttpStatus.OK);
+        else
+            responseEntity = new ResponseEntity("Persona no encontrada", HttpStatus.OK);
 
         return responseEntity;
     }

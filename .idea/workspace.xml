@@ -5,9 +5,78 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c1f22cb-fc1b-4dd2-9008-348bce9f4b66" name="Changes" comment="Ceci-Persona">
+      <change afterPath="$PROJECT_DIR$/data-persona/1 a 500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/10000001 a 10500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/1000001 a 1500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/10500001 a 11000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/11000001 a 11500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/11500001 a 12000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/12000001 a 12500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/12500001 a 13000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/13000001 a 13500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/13500001 a 14000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/14000001 a 14500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/14500001 a 15000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/15000001 a 15500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/1500001 a 2000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/15500001 a 16000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/16000001 a 16500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/16500001 a 17000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/17000001 a 17500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/17500001 a 18000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/18000001 a 18500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/18500001 a 19000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/19000001 a 19500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/19500001 a 20000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/20000001 a 20500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/2000001 a 2500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/20500001 a 21000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/21000001 a 21500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/21500001 a 22000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/22000001 a 22500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/22500001 a 23000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/23000001 a 23500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/23500001 a 24000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/24000001 a 24500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/24500001 a 25000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/25000001 a 25500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/2500001 a 3000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/25500001 a 26000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/26000001 a 26500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/26500001 a 27000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/27000001 a 27500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/27500001 a 28000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/28000001 a 28500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/28500001 a 29000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/29000001 a 29500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/29500001 a 30000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/3000001 a 3500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/3500001 a 4000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/4000001 a 4500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/4500001 a 5000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/5000001 a 5500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/500001 a 1000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/5500001 a 6000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/6000001 a 6500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/6500001 a 7000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/7000001 a 7500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/7500001 a 8000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/8000001 a 8500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/8500001 a 9000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/9000001 a 9500000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-persona/9500001 a 10000000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/PersonaToDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/util/BuscarDatosPersonaArchivo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/PersonaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/PersonaApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/controller/PersonaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/controller/PersonaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/model/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/model/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/service/AdministracionPersona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/service/AdministracionPersona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/service/ConsultaPersona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/service/ConsultaPersona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/util/db/ConexionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/util/db/ConexionDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/util/validator/PersonaValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/util/validator/PersonaValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/disoft/ceci/persona/PersonaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/disoft/ceci/persona/PersonaApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,16 +106,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Proyectos/Ceci/Persona/Persona",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Proyectos/Ceci/Persona/Persona&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Proyectos\Ceci\Persona\Persona" />
@@ -74,6 +143,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PersonaApplicationTests.buscarDatosFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Persona" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.disoft.ceci.persona.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.disoft.ceci.persona" />
+      <option name="MAIN_CLASS_NAME" value="com.disoft.ceci.persona.PersonaApplicationTests" />
+      <option name="METHOD_NAME" value="buscarDatosFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PersonaApplicationTests.probarConexion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Persona" />
       <extension name="coverage">
@@ -93,6 +178,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.PersonaApplication" />
+        <item itemvalue="JUnit.PersonaApplicationTests.buscarDatosFile" />
         <item itemvalue="JUnit.PersonaApplicationTests.probarConexion" />
       </list>
     </recent_temporary>
@@ -120,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665785555686</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ceci-Persona">
+      <created>1665787135747</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665787135747</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

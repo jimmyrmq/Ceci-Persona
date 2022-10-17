@@ -1,5 +1,6 @@
 package com.disoft.ceci.persona;
 
+import com.disoft.ceci.persona.v1.util.BuscarDatosPersonaArchivo;
 import com.disoft.ceci.persona.v1.util.db.ConexionDB;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -14,4 +15,9 @@ class PersonaApplicationTests {
 		Assertions.assertEquals(true,conn.initConection());
 	}
 
+	@Test
+	void buscarDatosFile(){
+		BuscarDatosPersonaArchivo bda= new BuscarDatosPersonaArchivo();
+		System.out.println(bda.getPersona(17310861));
+	}
 }

@@ -42,6 +42,7 @@ public class ConexionDB {
     public Connection initConection(){
         if(isDriver) {
             try {
+                System.out.println(getURL());
                 conexion = DriverManager.getConnection(getURL(), user, password);
             } catch (SQLException exc) {
                 String desc = "No se pudo establecer conexión con la base de datos.\n" + exc;

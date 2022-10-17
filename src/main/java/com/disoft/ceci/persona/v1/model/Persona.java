@@ -1,9 +1,11 @@
 package com.disoft.ceci.persona.v1.model;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.time.LocalDate;
 
+@JsonPropertyOrder({ "id", "idTipoDocumento","numeroDocumento","numeroFiscal", "primerNombre","segundoNombre", "primerApellido","segundoApellido","sexo","fechaNacimiento","direccion1","direccion2","telefono1","telefono2","edoCivil","correo","url","uriFoto" })
 public class Persona {
     private Integer ID;
     @ApiModelProperty(notes = "Tipo Documento - 1: RIF 2: Cedula de Identidad", example = "2", required = true)
@@ -13,11 +15,17 @@ public class Persona {
     private Integer numeroDocumento;
     private Integer numeroFiscal;
 
-    @ApiModelProperty(notes = "Nombre de la Persona", example = "Jimmy", required = true)
-    private String nombre;
+    @ApiModelProperty(notes = "Primer Nombre de la Persona", example = "Jimmy", required = true)
+    private String primerNombre;
 
-    @ApiModelProperty(notes = "Apellido de la Persona", example = "Apellido", required = true)
-    private String apellido;
+    @ApiModelProperty(notes = "Segundo Nombre de la Persona", example = "Jimmy", required = true)
+    private String segundoNombre;
+
+    @ApiModelProperty(notes = "Primer Apellido de la Persona", example = "Morales", required = true)
+    private String primerApellido;
+
+    @ApiModelProperty(notes = "Segundo Apellido de la Persona", example = "Morales", required = true)
+    private String segundoApellido;
 
     @ApiModelProperty(notes = "Sexo de la Persona", example = "M", required = true)
     private String sexo;
@@ -64,20 +72,36 @@ public class Persona {
         this.numeroFiscal = numeroFiscal;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getPrimerNombre() {
+        return primerNombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setPrimerNombre(String primerNombre) {
+        this.primerNombre = primerNombre;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getSegundoNombre() {
+        return segundoNombre;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setSegundoNombre(String segundoNombre) {
+        this.segundoNombre = segundoNombre;
+    }
+
+    public String getPrimerApellido() {
+        return primerApellido;
+    }
+
+    public void setPrimerApellido(String primerApellido) {
+        this.primerApellido = primerApellido;
+    }
+
+    public String getSegundoApellido() {
+        return segundoApellido;
+    }
+
+    public void setSegundoApellido(String segundoApellido) {
+        this.segundoApellido = segundoApellido;
     }
 
     public String getSexo() {
@@ -167,8 +191,10 @@ public class Persona {
                 ", idTipoDocumento=" + idTipoDocumento +
                 ", numeroDocumento=" + numeroDocumento +
                 ", numeroFiscal=" + numeroFiscal +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
+                ", primerNombre='" + primerNombre + '\'' +
+                ", segundoNombre='" + segundoNombre + '\'' +
+                ", primerApellido='" + primerApellido + '\'' +
+                ", segundoApellido='" + segundoApellido + '\'' +
                 ", sexo='" + sexo + '\'' +
                 ", fechaNacimiento=" + fechaNacimiento +
                 ", direccion1='" + direccion1 + '\'' +
@@ -181,6 +207,4 @@ public class Persona {
                 ", uriFoto='" + uriFoto + '\'' +
                 '}';
     }
-
-
 }

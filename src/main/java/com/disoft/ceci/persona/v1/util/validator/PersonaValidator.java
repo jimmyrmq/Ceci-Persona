@@ -15,9 +15,9 @@ public class PersonaValidator implements IValidatorPersona{
             message("Tipo de persona invalido.");
         else if(persona.getNumeroDocumento() == null || persona.getNumeroDocumento()<=0)
             message("Numero de documento incorrecto.");
-        else if(persona.getNombre() == null || persona.getNombre().trim().isEmpty())
+        else if(persona.getPrimerNombre() == null || persona.getPrimerNombre().trim().isEmpty())
             message("Ingrese el nombre de la persona.");
-        else if(persona.getApellido() == null || persona.getApellido().trim().isEmpty())
+        else if(persona.getPrimerApellido() == null || persona.getPrimerApellido().trim().isEmpty())
             message("Ingrese el apellido de la persona.");
         //else if(persona.getSexo() == null || persona.getSexo().trim().isEmpty() || persona.getSexo().length() != 1)
         //    message("El sexo de la persona es invalido.");
