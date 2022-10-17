@@ -12,7 +12,7 @@ class PersonaApplicationTests {
 	@Test
 	void probarConexion() {
 		ConexionDB conn = ConexionDB.getInstance();
-		Assertions.assertEquals(true,conn.initConection());
+		Assertions.assertEquals(true,conn.initConection()!=null);
 	}
 
 	@Test
