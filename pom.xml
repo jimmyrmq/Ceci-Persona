@@ -12,6 +12,7 @@
 	<artifactId>persona</artifactId>
 	<version>1</version>
 	<name>persona</name>
+	<packaging>war</packaging>
 	<description>Proyecto Ceci - Medicina Laboral - Administracion de Personas</description>
 	<properties>
 		<java.version>17</java.version>
