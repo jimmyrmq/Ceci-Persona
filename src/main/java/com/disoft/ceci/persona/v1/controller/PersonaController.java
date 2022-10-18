@@ -53,4 +53,10 @@ public class PersonaController {
 
         return  responseEntity;
     }
+
+    @GetMapping("check")
+    public String checkStatus(){
+        //return "Check status Empresa: Conexion OK";
+        return "Check Status: Administracion Consulta y Acciones de Personas";
+    }
 }
