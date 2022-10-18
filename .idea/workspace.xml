@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c1f22cb-fc1b-4dd2-9008-348bce9f4b66" name="Changes" comment="Ceci-Persona">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/PersonaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/PersonaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +247,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666062513140</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Ceci-Persona">
+      <created>1666062699348</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1666062699348</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Ceci-Persona">
+      <created>1666062987467</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1666062987467</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
