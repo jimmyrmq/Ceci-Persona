@@ -8,7 +8,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication//(exclude = { SecurityAutoConfiguration.class })
 //@ComponentScan(value = "com.disoft.ceci.persona")
-public class PersonaApplication  extends SpringBootServletInitializer {
+public class PersonaApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PersonaApplication.class, args);
