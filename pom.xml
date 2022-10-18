@@ -52,6 +52,12 @@
 			<version>3.0.0</version>
 		</dependency>
 
+		<!-- Para que corra en tomcat, para las pruebas locales tiene que comentarlo-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
