@@ -6,22 +6,23 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class BuscarDatosPersonaArchivo {
+
     public BuscarDatosPersonaArchivo(){}
     public synchronized Persona getPersona(Integer nroDocumento){
         long tiempoInicio = System.currentTimeMillis();
         Persona persona = null;
         String arch=buscarArchivo(nroDocumento);
-
         //System.out.println(arch);
         if(arch!=null){
             File f = new File(arch);//"nacional.txt"
-
             BufferedReader entrada;
             String data[];
             try {
                 entrada = new BufferedReader( new FileReader( f ) );
+
                 String linea;
                 int nroDoc;
                 cont:while(entrada.ready()){
