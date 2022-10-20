@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Controller
+//@Controller
 public class HelloWelcome {
     @RequestMapping(path = "/", method = RequestMethod.GET)
     //@GetMapping("/")
     public String welcome(){
-        return "h3>Bienvenido</h3>";
+        return "<h3>Bienvenido</h3>";
     }
 }
