@@ -1,3 +1,5 @@
+package com.disoft.ceci.persona;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 //import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
@@ -13,6 +15,6 @@ public class PersonaApplication {//extends SpringBootServletInitializer {
 
 	/*@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(PersonaApplication.class);
+		return builder.sources(com.disoft.ceci.persona.PersonaApplication.class);
 	}*/
 }
