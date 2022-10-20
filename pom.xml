@@ -17,7 +17,7 @@
 	<properties>
 		<java.version>17</java.version>
 		<!-- agregar este tag para iniciar(deployar) el servicio en tomcat-->
-		<!-- start-class>PersonaApplication</start-class -->
+		<start-class>PersonaApplication</start-class>
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -71,11 +71,11 @@
 		</dependency>
 
 		<!-- Para que corra en tomcat, para las pruebas locales tiene que comentarlo -->
-		<!-- dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
-		</dependency -->
+		</dependency>
 	</dependencies>
 
 	<build>
