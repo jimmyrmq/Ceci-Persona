@@ -18,8 +18,8 @@ public class BuscarDatosPersonaArchivo {
         //System.out.println(arch);
         if(arch!=null){
             File f = new File(arch);//"nacional.txt"
-            persona = new Persona();
-            persona.setPrimerNombre(f.getPath()+" "+f.getName()+" "+f.getAbsoluteFile());
+            //persona = new Persona();
+            //persona.setPrimerNombre(f.getPath()+" "+f.getName()+" "+f.getAbsoluteFile());
             BufferedReader entrada;
             String data[];
             try {

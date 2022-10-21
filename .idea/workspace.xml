@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5c1f22cb-fc1b-4dd2-9008-348bce9f4b66" name="Changes" comment="Ceci-Persona">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/util/BuscarDatosPersonaArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/disoft/ceci/persona/v1/util/BuscarDatosPersonaArchivo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,18 +55,22 @@
       <recent name="D:\Proyectos\Ceci\Persona\Persona\src\main\resources" />
       <recent name="D:\Proyectos\Ceci\Persona\Persona\src\main\java\com\disoft\ceci\persona\v1\util\db" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.disoft.ceci.persona" />
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.disoft.ceci.persona.config" />
       <recent name="com.disoft.ceci.persona.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PersonaApplication">
-    <configuration name="PersonaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.com.disoft.ceci.persona.PersonaApplication">
+    <configuration name="com.disoft.ceci.persona.PersonaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.disoft.ceci.persona.PersonaApplication" />
       <module name="Persona" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.disoft.ceci.persona.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -77,7 +82,7 @@
       <module name="Persona" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.disoft.ceci.persona.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,7 +98,7 @@
       <module name="Persona" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.disoft.ceci.persona.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,7 +112,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PersonaApplication" />
+        <item itemvalue="Application.com.disoft.ceci.persona.PersonaApplication" />
         <item itemvalue="JUnit.PersonaApplicationTests.probarConexion" />
         <item itemvalue="JUnit.PersonaApplicationTests.buscarDatosFile" />
       </list>
@@ -332,7 +337,42 @@
       <option name="project" value="LOCAL" />
       <updated>1666289271587</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Ceci-Persona">
+      <created>1666289455841</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1666289455841</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Ceci-Persona">
+      <created>1666289546513</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1666289546513</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Ceci-Persona">
+      <created>1666289862943</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1666289862943</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Ceci-Persona">
+      <created>1666289900182</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1666289900182</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Ceci-Persona">
+      <created>1666385393487</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1666385393487</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
