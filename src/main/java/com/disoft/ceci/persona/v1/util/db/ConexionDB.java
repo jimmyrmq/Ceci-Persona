@@ -93,7 +93,7 @@ public class ConexionDB {
     private boolean getDataConn(){
         boolean rtn = false;
 
-        File fileProperties = new File("D:\\Proyectos\\Ceci\\Persona\\Persona\\target\\classes\\conexion.properties");
+        File fileProperties = new File("D:\\Workspace\\Ceci\\Persona\\ApiCeci-Persona\\target\\classes\\conexion.properties");
 
         if(fileProperties.exists()) {
             rtn = true;
