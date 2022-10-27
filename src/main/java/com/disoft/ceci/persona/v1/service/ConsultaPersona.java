@@ -1,5 +1,6 @@
 package com.disoft.ceci.persona.v1.service;
 
+import com.disoft.ceci.persona.common.Log;
 import com.disoft.ceci.persona.v1.model.Persona;
 import com.disoft.ceci.persona.v1.util.BuscarDatosPersonaArchivo;
 import com.disoft.ceci.persona.v1.util.IPersonaConsulta;
@@ -28,7 +29,7 @@ public class ConsultaPersona implements IPersonaConsulta {
     @Override
     public Persona obtener(Integer nroDoc) {
         Persona persona = null;
-
+        Log.trace("Consultando a la ID: "+nroDoc);
         ConexionDB cbd = ConexionDB.getInstance();
         Connection conn  = cbd.initConection();
         if(conn!=null) {
@@ -65,7 +66,8 @@ public class ConsultaPersona implements IPersonaConsulta {
                         persona.setCorreo(rs.getString(16));
                         persona.setUrl(rs.getString(17));
                         persona.setUriFoto(rs.getString(18));
-                    }else {
+                    }
+                    else {
                         BuscarDatosPersonaArchivo bdpa = new BuscarDatosPersonaArchivo();
                         persona = bdpa.getPersona(nroDoc);
                     }
@@ -76,9 +78,13 @@ public class ConsultaPersona implements IPersonaConsulta {
                     String msg = "Error ResultData get():" + exc;
                     LOG.error(msg);
                 }
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
+            } catch (SQLException exc) {
+                String msg = "Error ResultData get():" + exc;
+                LOG.error(msg);
             }
+        }
+        else{
+
         }
 
         return persona;

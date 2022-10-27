@@ -1,7 +1,8 @@
 package com.disoft.ceci.persona.v1.util.db;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.disoft.ceci.persona.common.Log;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
@@ -15,7 +16,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class ConexionDB {
-    private static Logger LOG = LoggerFactory.getLogger(ConexionDB.class);
+    //private static Logger Log = LoggerFactory.getLogger(ConexionDB.class);
     private Connection conexion;
     private boolean isConn = false;
     private String motor = "mysql";
@@ -42,15 +43,25 @@ public class ConexionDB {
     }
 
     public Connection initConection(){
+        StringBuilder sconn = new StringBuilder();
+        sconn.append("Conexion: ");
+        conexion = null;
         if(isDriver) {
             try {
-                System.out.println(getURL());
-                conexion = DriverManager.getConnection(getURL(), user, password);
+                String urldb = getURL();
+                //Log.info("URL de conexion: "+urldb);
+                conexion = DriverManager.getConnection(urldb, user, password);
+                sconn.append("OK.");
             } catch (SQLException exc) {
                 String desc = "No se pudo establecer conexión con la base de datos.\n" + exc;
-                LOG.error(desc);
+                Log.error(desc);
+                sconn.append("ERROR.");
             }
         }
+        if(conexion==null)
+            sconn.append("ERROR.");
+
+        Log.info(sconn.toString());
 
         return conexion;
     }
@@ -60,7 +71,7 @@ public class ConexionDB {
             conexion.close();
         } catch (SQLException exc) {
             String desc = "Error al tratar de cerrar la conexión de la base de datos.\n" + exc;
-            LOG.error(desc);
+            Log.error(desc);
         }
     }
 
@@ -72,7 +83,7 @@ public class ConexionDB {
         } catch (ClassNotFoundException var4) {
             rtn = false;
             String desc = "No se puedo cargar el driver.\n" + var4;
-            LOG.error(desc);
+            Log.error(desc);
         }
 
         return rtn;
@@ -96,13 +107,17 @@ public class ConexionDB {
         boolean rtn = false;
         Resource resource = new ClassPathResource("conexion.properties");
         String filePath = null;
+        StringBuilder logFile = new StringBuilder();
         try {
             filePath =resource.getURL().getPath();
         } catch (IOException exc) {
-            LOG.error("No se pudo leer el archivo de propiedades: \n"+exc);
+            Log.error("No se pudo leer el archivo de propiedades: \n"+exc);
         }
+        logFile.append("File Data Conn: ");
+        logFile.append(filePath);
 
         if(filePath !=null) {
+            logFile.append(". OK");
             File fileProperties = new File(filePath);
             if (fileProperties.exists()) {
                 rtn = true;
@@ -118,15 +133,20 @@ public class ConexionDB {
                 } catch (FileNotFoundException exc) {
                     rtn = false;
                     String desc = "Archivo de configuracion no encontrado:\n" + exc.getMessage();
-                    LOG.error(desc);
+                    Log.error(desc);
                 } catch (IOException exc) {
                     rtn = false;
                     String desc = "Error en el archivo de configuracion:\n" + exc.getMessage();
-                    LOG.error(desc);
+                    Log.error(desc);
                 }
-            } else
-                LOG.error("No se pudo leer el archivo de propiedades");
+            }else {
+                logFile.append(" ERROR.");
+                Log.error("No se pudo leer el archivo de propiedades");
+            }
         }
+
+        Log.info(logFile.toString());
+
         return rtn;
     }
 }

@@ -11,7 +11,7 @@ public class Log {
     private static void configureLogger(){
         if(!isConfigured){
             PropertyConfigurator.configure("config/log4j.properties");
-            //isConfigured = true;
+            isConfigured = true;
         }
     }
 
@@ -24,5 +24,10 @@ public class Log {
     public static void info(String msg){
         configureLogger();
         log.info(msg);
+    }
+
+    public static void trace(String msg){
+        configureLogger();
+        log.trace(msg);
     }
 }

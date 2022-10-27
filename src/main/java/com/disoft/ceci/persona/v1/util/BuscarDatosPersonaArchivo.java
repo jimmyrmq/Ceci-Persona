@@ -1,5 +1,6 @@
 package com.disoft.ceci.persona.v1.util;
 
+import com.disoft.ceci.persona.common.Log;
 import com.disoft.ceci.persona.v1.model.Persona;
 import com.disoft.ceci.persona.v1.util.db.ConexionDB;
 import org.slf4j.Logger;
@@ -13,7 +14,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class BuscarDatosPersonaArchivo {
-    private static Logger LOG = LoggerFactory.getLogger(BuscarDatosPersonaArchivo.class);
+    //private static Logger Log = LoggerFactory.getLogger(BuscarDatosPersonaArchivo.class);
 
     public BuscarDatosPersonaArchivo(){}
     public synchronized Persona getPersona(Integer nroDocumento){
@@ -22,7 +23,6 @@ public class BuscarDatosPersonaArchivo {
         String arch=buscarArchivo(nroDocumento);
         //System.out.println(arch);
         if(arch!=null){
-
             Resource resource = new ClassPathResource(arch);
             String filePath = null;
             try {
@@ -30,10 +30,15 @@ public class BuscarDatosPersonaArchivo {
                 //String fp = resource.getURL().getPath();
                 //filePath = fp.replaceAll("%20"," ");
             } catch (IOException exc) {
-                LOG.error("No se pudo leer el archivo de propiedades: \n"+exc);
+                Log.error("No se pudo leer el archivo de propiedades: \n"+exc);
             }
+            StringBuilder sb = new StringBuilder();
+            sb.append("Buscando en el archivo: "+filePath);
+
             File f = new File(filePath);//"nacional.txt"
-            System.out.println(f.getPath()+" "+f.getName()+" "+f.getAbsoluteFile());
+            sb.append(f.exists()?" OK.":" No existe.");
+            Log.trace(sb.toString());
+            //System.out.println(f.getPath()+" "+f.getName()+" "+f.getAbsoluteFile());
             //persona = new Persona();
             //persona.setPrimerNombre(f.getPath()+" "+f.getName()+" "+f.getAbsoluteFile());
             BufferedReader entrada = null;
@@ -66,14 +71,14 @@ public class BuscarDatosPersonaArchivo {
                     }
                 }
             }catch (IOException exc) {
-                LOG.error("Error al tratar del leer el archivo: \n"+exc);
+                Log.error("Error al tratar del leer el archivo: \n"+exc);
             }
             finally{
                 if(entrada!=null) {
                     try {
                         entrada.close();
                     } catch (IOException exc) {
-                        LOG.error("Error al tratar de cerrar el archivo: \n"+exc);
+                        Log.error("Error al tratar de cerrar el archivo: \n"+exc);
                     }
                 }
             }
