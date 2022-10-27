@@ -2,6 +2,8 @@ package com.disoft.ceci.persona.v1.util.db;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -92,32 +94,39 @@ public class ConexionDB {
 
     private boolean getDataConn(){
         boolean rtn = false;
+        Resource resource = new ClassPathResource("conexion.properties");
+        String filePath = null;
+        try {
+            filePath =resource.getURL().getPath();
+        } catch (IOException exc) {
+            LOG.error("No se pudo leer el archivo de propiedades: \n"+exc);
+        }
 
-        File fileProperties = new File("D:\\Workspace\\Ceci\\Persona\\ApiCeci-Persona\\target\\classes\\conexion.properties");
-
-        if(fileProperties.exists()) {
-            rtn = true;
-            Properties properties = new Properties();
-            try {
-                properties.load(new FileInputStream(fileProperties));
-                motor = properties.getProperty("motor");
-                driver = properties.getProperty("driver");
-                dir = properties.getProperty("dir");
-                dbname = properties.getProperty("dbname");
-                user = properties.getProperty("user");
-                password = properties.getProperty("password");
-            } catch (FileNotFoundException exc) {
-                rtn = false;
-                String desc = "Archivo de configuracion no encontrado:\n" + exc.getMessage();
-                LOG.error(desc);
-            } catch (IOException exc) {
-                rtn = false;
-                String desc = "Error en el archivo de configuracion:\n" + exc.getMessage();
-                LOG.error(desc);
-            }
-        }else
-            LOG.error("No se pudo leer el archivo de propiedades");
-
+        if(filePath !=null) {
+            File fileProperties = new File(filePath);
+            if (fileProperties.exists()) {
+                rtn = true;
+                Properties properties = new Properties();
+                try {
+                    properties.load(new FileInputStream(fileProperties));
+                    motor = properties.getProperty("motor");
+                    driver = properties.getProperty("driver");
+                    dir = properties.getProperty("dir");
+                    dbname = properties.getProperty("dbname");
+                    user = properties.getProperty("user");
+                    password = properties.getProperty("password");
+                } catch (FileNotFoundException exc) {
+                    rtn = false;
+                    String desc = "Archivo de configuracion no encontrado:\n" + exc.getMessage();
+                    LOG.error(desc);
+                } catch (IOException exc) {
+                    rtn = false;
+                    String desc = "Error en el archivo de configuracion:\n" + exc.getMessage();
+                    LOG.error(desc);
+                }
+            } else
+                LOG.error("No se pudo leer el archivo de propiedades");
+        }
         return rtn;
     }
 }

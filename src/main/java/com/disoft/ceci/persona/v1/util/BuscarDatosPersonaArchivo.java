@@ -1,27 +1,42 @@
 package com.disoft.ceci.persona.v1.util;
 
 import com.disoft.ceci.persona.v1.model.Persona;
+import com.disoft.ceci.persona.v1.util.db.ConexionDB;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.logging.Logger;
 
 public class BuscarDatosPersonaArchivo {
+    private static Logger LOG = LoggerFactory.getLogger(BuscarDatosPersonaArchivo.class);
 
     public BuscarDatosPersonaArchivo(){}
     public synchronized Persona getPersona(Integer nroDocumento){
-        long tiempoInicio = System.currentTimeMillis();
+        //long tiempoInicio = System.currentTimeMillis();
         Persona persona = null;
         String arch=buscarArchivo(nroDocumento);
         //System.out.println(arch);
         if(arch!=null){
-            File f = new File(arch);//"nacional.txt"
-            //System.out.println(f.getPath()+" "+f.getName()+" "+f.getAbsoluteFile());
+
+            Resource resource = new ClassPathResource(arch);
+            String filePath = null;
+            try {
+                filePath = resource.getURL().getPath();
+                //String fp = resource.getURL().getPath();
+                //filePath = fp.replaceAll("%20"," ");
+            } catch (IOException exc) {
+                LOG.error("No se pudo leer el archivo de propiedades: \n"+exc);
+            }
+            File f = new File(filePath);//"nacional.txt"
+            System.out.println(f.getPath()+" "+f.getName()+" "+f.getAbsoluteFile());
             //persona = new Persona();
             //persona.setPrimerNombre(f.getPath()+" "+f.getName()+" "+f.getAbsoluteFile());
-            BufferedReader entrada;
+            BufferedReader entrada = null;
             String data[];
             try {
                 entrada = new BufferedReader( new FileReader( f ) );
@@ -45,13 +60,22 @@ public class BuscarDatosPersonaArchivo {
                         persona.setSexo("S");
                         persona.setDataOrigin("FILE");
 
-                        long totalTiempo = System.currentTimeMillis() - tiempoInicio;
-                        System.out.println("El tiempo de demora es :" + totalTiempo + " miliseg");
+                        //long totalTiempo = System.currentTimeMillis() - tiempoInicio;
+                        //System.out.println("El tiempo de demora es :" + totalTiempo + " miliseg");
                         break cont;
                     }
                 }
-            }catch (IOException e) {
-                e.printStackTrace();
+            }catch (IOException exc) {
+                LOG.error("Error al tratar del leer el archivo: \n"+exc);
+            }
+            finally{
+                if(entrada!=null) {
+                    try {
+                        entrada.close();
+                    } catch (IOException exc) {
+                        LOG.error("Error al tratar de cerrar el archivo: \n"+exc);
+                    }
+                }
             }
         }
 
@@ -64,8 +88,9 @@ public class BuscarDatosPersonaArchivo {
         j=sum;
         fin=30000000/sum;
         do{
-            if(nroDocumento>=((i*sum)+1)&nroDocumento<=j)
-                return "data-persona/"+((i*sum)+1)+" a "+j+".txt";
+            if(nroDocumento>=((i*sum)+1)&nroDocumento<=j) {
+                return "data-persona/"+ (i+1) +".dat";//+ ((i * sum) + 1) + " a " + j + ".txt";
+            }
             j+=sum;
             i++;
         }while(i<fin);
