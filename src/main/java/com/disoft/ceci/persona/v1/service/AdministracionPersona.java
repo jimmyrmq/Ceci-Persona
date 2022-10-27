@@ -41,7 +41,7 @@ public class AdministracionPersona implements IPersonaAdministracion {
                 else {
                     query = "update persona set IDTipoDocumento=?, NumeroDocumento=?, NumeroFiscal=?, Nombre1=?, Nombre2=?, Apellido1=?, Apellido2=?, Sexo=?, FechaNacimiento=?, Direccion1=?, Direccion2=?, Telefono1=?, Telefono2=?, EdoCivil=?, Correo=?, URL=?, URIFoto=? where id = ?;";
                     pstmt = conn.prepareStatement(query, 1003, 1007);
-                    pstmt.setInt(16,id);
+                    pstmt.setInt(18,id);
                 }
                 //pstmt.setInt(1,id);
                 pstmt.setInt(1,persona.getIdTipoDocumento());
