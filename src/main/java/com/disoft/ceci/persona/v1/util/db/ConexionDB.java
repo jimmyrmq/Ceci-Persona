@@ -16,7 +16,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class ConexionDB {
-    //private static Logger Log = LoggerFactory.getLogger(ConexionDB.class);
+    private static org.slf4j.Logger SLog = org.slf4j.LoggerFactory.getLogger(ConexionDB.class);
     private Connection conexion;
     private boolean isConn = false;
     private String motor = "mysql";
@@ -113,11 +113,13 @@ public class ConexionDB {
         } catch (IOException exc) {
             Log.error("No se pudo leer el archivo de propiedades: \n"+exc);
         }
+
         logFile.append("File Data Conn: ");
         logFile.append(filePath);
 
         if(filePath !=null) {
             logFile.append(". OK");
+            SLog.error(filePath);
             File fileProperties = new File(filePath);
             if (fileProperties.exists()) {
                 rtn = true;
@@ -134,10 +136,12 @@ public class ConexionDB {
                     rtn = false;
                     String desc = "Archivo de configuracion no encontrado:\n" + exc.getMessage();
                     Log.error(desc);
+                    SLog.error(desc);
                 } catch (IOException exc) {
                     rtn = false;
                     String desc = "Error en el archivo de configuracion:\n" + exc.getMessage();
                     Log.error(desc);
+                    SLog.error(desc);
                 }
             }else {
                 logFile.append(" ERROR.");
