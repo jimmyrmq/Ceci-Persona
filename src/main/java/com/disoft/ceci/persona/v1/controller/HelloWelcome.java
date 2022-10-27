@@ -12,6 +12,6 @@ public class HelloWelcome {
     @RequestMapping(path = "/", method = RequestMethod.GET)
     //@GetMapping("/")
     public String welcome(){
-        return "<h3>Bienvenido</h3>";
+        return "<h3>Bienvenido" +System.getProperty("user.dir")+"</h3>";
     }
 }
