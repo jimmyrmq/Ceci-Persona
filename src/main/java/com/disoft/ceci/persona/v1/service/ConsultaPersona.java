@@ -49,6 +49,7 @@ public class ConsultaPersona implements IPersonaConsulta {
                         persona.setPrimerApellido(rs.getString(7));
                         persona.setSegundoApellido(rs.getString(8));
                         persona.setSexo(rs.getString(9));
+                        persona.setDataOrigin("DB");
 
                         Date input = rs.getDate(10);
                         if (input != null) {

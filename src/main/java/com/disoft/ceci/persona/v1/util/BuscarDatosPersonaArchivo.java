@@ -43,6 +43,7 @@ public class BuscarDatosPersonaArchivo {
                         persona.setPrimerNombre(data[4]);
                         persona.setSegundoNombre(data[5]);
                         persona.setSexo("S");
+                        persona.setDataOrigin("FILE");
 
                         long totalTiempo = System.currentTimeMillis() - tiempoInicio;
                         System.out.println("El tiempo de demora es :" + totalTiempo + " miliseg");

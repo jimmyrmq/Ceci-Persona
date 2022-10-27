@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 import java.time.LocalDate;
 
-@JsonPropertyOrder({ "id", "idTipoDocumento","numeroDocumento","numeroFiscal", "primerNombre","segundoNombre", "primerApellido","segundoApellido","sexo","fechaNacimiento","direccion1","direccion2","telefono1","telefono2","edoCivil","correo","url","uriFoto" })
+@JsonPropertyOrder({ "id", "idTipoDocumento","numeroDocumento","numeroFiscal", "primerNombre","segundoNombre", "primerApellido","segundoApellido","sexo","fechaNacimiento","direccion1","direccion2","telefono1","telefono2","edoCivil","correo","url","uriFoto","dataOrigin" })
 public class Persona {
     private Integer ID;
     @ApiModelProperty(notes = "Tipo Documento - 1: RIF 2: Cedula de Identidad", example = "2", required = true)
@@ -39,6 +39,9 @@ public class Persona {
     private String correo;
     private String url;
     private String uriFoto;
+
+    @ApiModelProperty(notes = "Origen de los datos, BD o FILE", example = "FILE", required = true)
+    private String dataOrigin;
 
     public Integer getID() {
         return ID;
@@ -184,6 +187,14 @@ public class Persona {
         this.uriFoto = uriFoto;
     }
 
+    public String getDataOrigin() {
+        return dataOrigin;
+    }
+
+    public void setDataOrigin(String dataOrigin) {
+        this.dataOrigin = dataOrigin;
+    }
+
     @Override
     public String toString() {
         return "Persona{" +
@@ -205,6 +216,7 @@ public class Persona {
                 ", correo='" + correo + '\'' +
                 ", url='" + url + '\'' +
                 ", uriFoto='" + uriFoto + '\'' +
+                ", dataOrigin='" + dataOrigin + '\'' +
                 '}';
     }
 }
