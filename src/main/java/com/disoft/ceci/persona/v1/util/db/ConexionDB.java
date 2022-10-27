@@ -109,7 +109,9 @@ public class ConexionDB {
         String filePath = null;
         StringBuilder logFile = new StringBuilder();
         try {
-            filePath =resource.getURL().getPath();
+            //filePath = resource.getURL().getPath();
+            String fp = resource.getURL().getPath();
+            filePath = fp.replaceAll("%20"," ");
         } catch (IOException exc) {
             Log.error("No se pudo leer el archivo de propiedades: \n"+exc);
         }
