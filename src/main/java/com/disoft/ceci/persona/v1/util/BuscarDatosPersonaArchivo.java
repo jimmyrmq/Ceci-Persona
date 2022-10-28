@@ -23,15 +23,9 @@ public class BuscarDatosPersonaArchivo {
         String arch=buscarArchivo(nroDocumento);
         //System.out.println(arch);
         if(arch!=null){
-            Resource resource = new ClassPathResource(arch);
-            String filePath = null;
-            try {
-                //filePath = resource.getURL().getPath();
-                String fp = resource.getURL().getPath();
-                filePath = fp.replaceAll("%20"," ");
-            } catch (IOException exc) {
-                Log.error("No se pudo leer el archivo de propiedades: \n"+exc);
-            }
+
+            String filePath = Helper.getInstance().getPath(arch);
+
             StringBuilder sb = new StringBuilder();
             sb.append("Buscando en el archivo: "+filePath);
 

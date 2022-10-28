@@ -1,5 +1,6 @@
 package com.disoft.ceci.persona.common;
 
+import com.disoft.ceci.persona.v1.util.Helper;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -10,7 +11,8 @@ public class Log {
 
     private static void configureLogger(){
         if(!isConfigured){
-            PropertyConfigurator.configure("config/log4j.properties");
+            String file = Helper.getInstance().getPath("/config/log4j.properties");
+            PropertyConfigurator.configure(file);
             isConfigured = true;
         }
     }

@@ -3,6 +3,7 @@ package com.disoft.ceci.persona.v1.util.db;
 import com.disoft.ceci.persona.common.Log;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
+import com.disoft.ceci.persona.v1.util.Helper;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
@@ -16,7 +17,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class ConexionDB {
-    private static org.slf4j.Logger SLog = org.slf4j.LoggerFactory.getLogger(ConexionDB.class);
+    //private static org.slf4j.Logger SLog = org.slf4j.LoggerFactory.getLogger(ConexionDB.class);
     private Connection conexion;
     private boolean isConn = false;
     private String motor = "mysql";
@@ -105,23 +106,15 @@ public class ConexionDB {
 
     private boolean getDataConn(){
         boolean rtn = false;
-        Resource resource = new ClassPathResource("conexion.properties");
-        String filePath = null;
+
+        String filePath = Helper.getInstance().getPath("config/conexion.properties");
         StringBuilder logFile = new StringBuilder();
-        try {
-            //filePath = resource.getURL().getPath();
-            String fp = resource.getURL().getPath();
-            filePath = fp.replaceAll("%20"," ");
-        } catch (IOException exc) {
-            Log.error("No se pudo leer el archivo de propiedades: \n"+exc);
-        }
 
         logFile.append("File Data Conn: ");
         logFile.append(filePath);
 
         if(filePath !=null) {
             logFile.append(". OK");
-            SLog.error(filePath);
             File fileProperties = new File(filePath);
             if (fileProperties.exists()) {
                 rtn = true;
@@ -138,12 +131,10 @@ public class ConexionDB {
                     rtn = false;
                     String desc = "Archivo de configuracion no encontrado:\n" + exc.getMessage();
                     Log.error(desc);
-                    SLog.error(desc);
                 } catch (IOException exc) {
                     rtn = false;
                     String desc = "Error en el archivo de configuracion:\n" + exc.getMessage();
                     Log.error(desc);
-                    SLog.error(desc);
                 }
             }else {
                 logFile.append(" ERROR.");
