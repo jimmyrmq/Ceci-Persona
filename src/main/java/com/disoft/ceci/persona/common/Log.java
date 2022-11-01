@@ -1,6 +1,5 @@
 package com.disoft.ceci.persona.common;
 
-import com.disoft.ceci.persona.v1.util.Helper;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 

@@ -1,11 +1,9 @@
-package com.disoft.ceci.persona.v1.util.db;
+package com.disoft.ceci.persona.common.db;
 
 import com.disoft.ceci.persona.common.Log;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
-import com.disoft.ceci.persona.v1.util.Helper;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
+import com.disoft.ceci.persona.common.Helper;
 
 import java.io.File;
 import java.io.FileInputStream;

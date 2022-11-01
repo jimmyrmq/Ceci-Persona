@@ -4,7 +4,7 @@ import com.disoft.ceci.persona.common.Log;
 import com.disoft.ceci.persona.v1.model.Persona;
 import com.disoft.ceci.persona.v1.util.BuscarDatosPersonaArchivo;
 import com.disoft.ceci.persona.v1.util.IPersonaConsulta;
-import com.disoft.ceci.persona.v1.util.db.ConexionDB;
+import com.disoft.ceci.persona.common.db.ConexionDB;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -14,8 +14,6 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
-import java.time.ZoneId;
 import java.util.List;
 //import java.util.Date;
 

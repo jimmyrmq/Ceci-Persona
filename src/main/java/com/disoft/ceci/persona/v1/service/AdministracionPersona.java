@@ -4,12 +4,11 @@ import com.disoft.ceci.persona.common.resultdata.ResultOperation;
 import com.disoft.ceci.persona.common.resultdata.Severidad;
 import com.disoft.ceci.persona.v1.model.Persona;
 import com.disoft.ceci.persona.v1.util.IPersonaAdministracion;
-import com.disoft.ceci.persona.v1.util.db.ConexionDB;
+import com.disoft.ceci.persona.common.db.ConexionDB;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;

@@ -1,6 +1,5 @@
-package com.disoft.ceci.persona.v1.util;
+package com.disoft.ceci.persona.common;
 
-import com.disoft.ceci.persona.common.Log;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
